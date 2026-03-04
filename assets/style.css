@@ -199,3 +199,7 @@ a:hover{text-decoration:underline}
   text-underline-offset: 2px;
   text-decoration-thickness: 2px;
 }
+.coming-soon{
+  color: var(--muted);
+  font-style: italic;
+}
