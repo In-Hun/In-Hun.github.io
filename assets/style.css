@@ -7,7 +7,7 @@
   --link:#2563eb;
   --shadow: 0 8px 24px rgba(17,24,39,0.08);
   --radius: 16px;
-  --max: 1120px;
+  --max: 1360px;
   --mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
   --sans: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", sans-serif;
 }
@@ -88,8 +88,8 @@ a:hover{text-decoration:underline}
 
 .layout{
   display:grid;
-  grid-template-columns: 320px 1fr;
-  gap:18px;
+  grid-template-columns: 340px 1fr;
+  gap:24px;
   padding:22px 0 40px;
 }
 
