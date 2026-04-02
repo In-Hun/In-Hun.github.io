@@ -203,3 +203,26 @@ a:hover{text-decoration:underline}
   color: var(--muted);
   font-style: italic;
 }
+
+.pub-badge {
+  display: inline-block;
+  margin-right: 8px;
+  padding: 2px 8px;
+  border-radius: 999px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  line-height: 1.4;
+  vertical-align: middle;
+}
+
+.pub-badge.conf {
+  background: #eef4ff;
+  color: #2f5bd3;
+  border: 1px solid #cddcff;
+}
+
+.pub-badge.journal {
+  background: #eefbf3;
+  color: #1f8a4c;
+  border: 1px solid #ccefd8;
+}
