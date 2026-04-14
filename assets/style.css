@@ -108,7 +108,7 @@ a:hover{text-decoration:underline}
 .profile{display:flex; gap:14px; padding:16px}
 .avatar{
   width:96px; height:96px;
-  border-radius:999px;
+  border-radius:12px;
   object-fit:cover;
   border:1px solid var(--line);
   background:var(--bg);
