@@ -107,8 +107,9 @@ a:hover{text-decoration:underline}
 .sidebar{display:flex; flex-direction:column; gap:14px}
 .profile{display:flex; gap:14px; padding:16px}
 .avatar{
-  width:96px; height:96px;
-  border-radius:12px;
+  width:96px;
+  height:96px;
+  border-radius:12px;   /* 또는 12px 정도로 주면 둥근 사각형 */
   object-fit:cover;
   border:1px solid var(--line);
   background:var(--bg);
