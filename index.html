@@ -1,11 +1,20 @@
 <!doctype html>
-<html lang="ko">
+<html lang="en" data-theme="light">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <meta name="description" content="Graduate Student Homepage" />
+  <meta name="description" content="Inhun Lee — Ph.D. student researching cryptography, side-channel analysis, fault injection, and post-quantum cryptography." />
+  <meta name="theme-color" content="#8b0029" />
   <title>Inhun Lee | Homepage</title>
+  <script>
+    try {
+      document.documentElement.dataset.theme = localStorage.getItem("theme") === "dark" ? "dark" : "light";
+    } catch (error) {
+      document.documentElement.dataset.theme = "light";
+    }
+  </script>
   <link rel="stylesheet" href="assets/style.css" />
+  <script src="assets/script.js" defer></script>
 </head>
 
 <body>
@@ -13,12 +22,19 @@
 
   <header class="topbar">
     <div class="container topbar-inner">
-      <div class="brand">
-        <span class="brand-name">Inhun Lee</span>
-        <span class="brand-sub">Graduate Student</span>
-      </div>
+      <a class="brand" href="#main" aria-label="Inhun Lee, back to top">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 32 32" focusable="false">
+            <path d="M3 18h6l3-8 4 16 5-23 4 15h4" />
+          </svg>
+        </span>
+        <span class="brand-copy">
+          <span class="brand-name">Inhun Lee</span>
+          <span class="brand-sub">Cryptography Researcher</span>
+        </span>
+      </a>
 
-      <nav class="nav">
+      <nav class="nav" id="site-nav" aria-label="Primary navigation">
         <a href="#about">About</a>
         <a href="#news">News</a>
         <a href="#interests">Research</a>
@@ -28,33 +44,50 @@
         <a href="#awards">Awards</a>
         <a href="#experience">Experience</a>
       </nav>
+
+      <div class="header-actions">
+        <button class="icon-button theme-toggle" type="button" aria-label="Switch to dark mode" title="Switch to dark mode">
+          <svg class="theme-icon theme-icon-moon" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M20.2 15.4A8.5 8.5 0 0 1 8.6 3.8 8.5 8.5 0 1 0 20.2 15.4Z" />
+          </svg>
+          <svg class="theme-icon theme-icon-sun" viewBox="0 0 24 24" aria-hidden="true">
+            <circle cx="12" cy="12" r="3.5" />
+            <path d="M12 2v2M12 20v2M4.93 4.93l1.42 1.42M17.65 17.65l1.42 1.42M2 12h2M20 12h2M4.93 19.07l1.42-1.42M17.65 6.35l1.42-1.42" />
+          </svg>
+        </button>
+        <button class="icon-button nav-toggle" type="button" aria-controls="site-nav" aria-expanded="false" aria-label="Open navigation">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
     </div>
   </header>
 
   <main id="main" class="container layout">
     <!-- Sidebar -->
     <aside class="sidebar">
-      <div class="card profile">
+      <div class="card profile reveal">
         <img class="avatar" src="assets/profile.jpg" alt="Your profile photo" />
         <div class="profile-text">
-          <h1 class="h1">Inhun Lee</h1>
+          <h2 class="profile-name">Inhun Lee</h2>
           <p class="muted">
             Ph.D. Student<br />
             School of Cybersecurity<br />
             Korea University, Seoul<br />
             Republic of Korea
           </p>
+        </div>
 
-          <div class="links">
-            <a href="https://scholar.google.com/citations?user=YpV7D4QAAAAJ" target="_blank" rel="noreferrer">Google Scholar</a>
-            <a href="https://orcid.org/0009-0003-3667-7857" target="_blank" rel="noreferrer">ORCID</a>
-            <a href="https://github.com/In-Hun" target="_blank" rel="noreferrer">GitHub</a>
-            <a href="https://www.linkedin.com/in/inhun-lee-4105a5373/" target="_blank" rel="noreferrer">LinkedIn</a>
-          </div>
+        <div class="links">
+          <a href="https://scholar.google.com/citations?user=YpV7D4QAAAAJ" target="_blank" rel="noreferrer">Google Scholar</a>
+          <a href="https://orcid.org/0009-0003-3667-7857" target="_blank" rel="noreferrer">ORCID</a>
+          <a href="https://github.com/In-Hun" target="_blank" rel="noreferrer">GitHub</a>
+          <a href="https://www.linkedin.com/in/inhun-lee-4105a5373/" target="_blank" rel="noreferrer">LinkedIn</a>
         </div>
       </div>
 
-      <div class="card small">
+      <div class="card small reveal">
         <div class="small-title">Quick Information</div>
         <ul class="bullets">
           <li>Email: dldlsgns99@korea.ac.kr</li>
@@ -68,8 +101,21 @@
 
     <!-- Content -->
     <section class="content">
+      <section class="hero reveal" aria-labelledby="hero-title">
+        <div class="hero-glow" aria-hidden="true"></div>
+        <p class="eyebrow">Cryptography · Implementation Security</p>
+        <h1 id="hero-title">Securing cryptography,<br /><span>from theory <br class="mobile-break" />to reality.</span></h1>
+        <p class="hero-description">
+          I study how cryptographic implementations behave in the real world—through side-channel analysis, fault injection, and post-quantum cryptography.
+        </p>
+        <div class="hero-actions">
+          <a class="primary-button" href="#publications">Explore my research <span aria-hidden="true">→</span></a>
+          <a class="text-button" href="mailto:dldlsgns99@korea.ac.kr">Get in touch</a>
+        </div>
+      </section>
+
       <!-- About Me -->
-      <section id="about" class="card section">
+      <section id="about" class="card section reveal">
         <h2>About Me</h2>
         <p>
           I am a first-year Ph.D. student in the <a href="https://security.korea.ac.kr/">School of Cybersecurity at Korea University</a> and a member of the <a href="http://crypto.korea.ac.kr/">Cryptographic Algorithm Lab</a>. My research focuses on the security of cryptographic algorithms, with particular interests in side-channel analysis and fault injection attacks. I am especially interested in blind side-channel analysis, implementation security, and the security evaluation of post-quantum cryptography implementation.
@@ -77,7 +123,7 @@
       </section>
 
       <!-- News -->
-      <section id="news" class="card section">
+      <section id="news" class="card section reveal">
         <h2>News</h2>
         <ul class="timeline">
           <li>
@@ -108,7 +154,7 @@
       </section>
 
       <!-- Research Interests -->
-      <section id="interests" class="card section">
+      <section id="interests" class="card section reveal">
         <h2>Research Interests</h2>
         <ul class="tags">
           <li>Cryptography</li>
@@ -120,7 +166,7 @@
       </section>
 
       <!-- Education -->
-      <section id="education" class="card section">
+      <section id="education" class="card section reveal">
         <h2>Education</h2>
         <ul class="list">
           <li>
@@ -148,7 +194,7 @@
       </section>
 
       <!-- Publications -->
-      <section id="publications" class="card section">
+      <section id="publications" class="card section reveal">
         <h2>Publications</h2>
 
         <h3>International Journals &amp; Conferences</h3>
@@ -233,7 +279,7 @@
       </section>
 
       <!-- Patents -->
-      <section id="patents" class="card section">
+      <section id="patents" class="card section reveal">
         <h2>Patents</h2>
         <ul class="list">
           <li>
@@ -247,7 +293,7 @@
       </section>
 
       <!-- Awards -->
-      <section id="awards" class="card section">
+      <section id="awards" class="card section reveal">
         <h2>Awards</h2>
         <ul class="list">
           <li>
@@ -282,7 +328,7 @@
       </section>
 
       <!-- Other Experience -->
-      <section id="experience" class="card section">
+      <section id="experience" class="card section reveal">
         <h2>Other Experience</h2>
         <ul class="list">
           <li>
@@ -329,8 +375,5 @@
     </section>
   </main>
 
-  <script>
-    document.getElementById("y").textContent = new Date().getFullYear();
-  </script>
 </body>
 </html>
