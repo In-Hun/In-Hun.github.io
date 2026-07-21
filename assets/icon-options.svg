@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="840" height="250" viewBox="0 0 840 250" role="img" aria-labelledby="title desc">
+  <title id="title">Header icon options for Inhun Lee's homepage</title>
+  <desc id="desc">Four crimson icon options: side-channel waveform, keyhole, shield circuit, and IH monogram.</desc>
+  <defs>
+    <linearGradient id="crimson" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#b21645" />
+      <stop offset="1" stop-color="#67001f" />
+    </linearGradient>
+    <filter id="shadow" x="-30%" y="-30%" width="160%" height="180%">
+      <feDropShadow dx="0" dy="8" stdDeviation="8" flood-color="#571021" flood-opacity="0.18" />
+    </filter>
+    <style>
+      .card { fill: #fffdfc; stroke: #e4d8dc; stroke-width: 1; }
+      .tile { fill: url(#crimson); }
+      .icon { fill: none; stroke: #fff; stroke-width: 4; stroke-linecap: round; stroke-linejoin: round; }
+      .label { fill: #241b1e; font-family: Inter, "Segoe UI", sans-serif; font-size: 15px; font-weight: 700; text-anchor: middle; }
+      .number { fill: #8b0029; font-family: Georgia, serif; font-size: 13px; font-weight: 700; text-anchor: middle; }
+    </style>
+  </defs>
+
+  <rect width="840" height="250" rx="24" fill="#f7f4f2" />
+
+  <g transform="translate(20 18)">
+    <rect class="card" width="185" height="214" rx="20" />
+    <rect class="tile" x="45" y="27" width="96" height="96" rx="25" filter="url(#shadow)" />
+    <path class="icon" d="M60 76h13l7-17 10 34 11-52 9 35h16" />
+    <text class="number" x="92.5" y="153">01</text>
+    <text class="label" x="92.5" y="180">Waveform</text>
+  </g>
+
+  <g transform="translate(225 18)">
+    <rect class="card" width="185" height="214" rx="20" />
+    <rect class="tile" x="45" y="27" width="96" height="96" rx="25" filter="url(#shadow)" />
+    <circle class="icon" cx="93" cy="64" r="15" />
+    <path class="icon" d="M88 77l-5 25h20l-5-25" />
+    <text class="number" x="92.5" y="153">02</text>
+    <text class="label" x="92.5" y="180">Keyhole</text>
+  </g>
+
+  <g transform="translate(430 18)">
+    <rect class="card" width="185" height="214" rx="20" />
+    <rect class="tile" x="45" y="27" width="96" height="96" rx="25" filter="url(#shadow)" />
+    <path class="icon" d="M93 43l27 10v20c0 18-11 29-27 35-16-6-27-17-27-35V53l27-10Z" />
+    <path class="icon" d="M80 69h13m0 0v20m0-20 12-9m-12 29 12 7" stroke-width="3" />
+    <circle cx="79" cy="69" r="4" fill="#fff" />
+    <circle cx="106" cy="59" r="4" fill="#fff" />
+    <circle cx="106" cy="97" r="4" fill="#fff" />
+    <text class="number" x="92.5" y="153">03</text>
+    <text class="label" x="92.5" y="180">Shield + Circuit</text>
+  </g>
+
+  <g transform="translate(635 18)">
+    <rect class="card" width="185" height="214" rx="20" />
+    <rect class="tile" x="45" y="27" width="96" height="96" rx="25" filter="url(#shadow)" />
+    <text x="93" y="91" fill="#fff" font-family="Georgia, serif" font-size="38" font-weight="700" text-anchor="middle" letter-spacing="-3">IH</text>
+    <text class="number" x="92.5" y="153">04</text>
+    <text class="label" x="92.5" y="180">IH Monogram</text>
+  </g>
+</svg>
